@@ -8,8 +8,8 @@ const isDev = process.argv[2] !== '--env=build';
 // Скрипты для сайта
 const SCRIPTS = env => createConfig({
     isDev: isDev,
-    entry: './src/js/index.ts',
-    outputFile: './dist/js/index.min.js',
+    entry: './js/dev/index.ts',
+    outputFile: './js/index.min.js',
     cssFile: '../css/index.min.css'
 });
 

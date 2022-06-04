@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './scss/index.scss';
 
 const App = () => {
@@ -14,8 +14,6 @@ export const initAppLavka = () => {
     const wrap = document.getElementById('app-lavka');
     if (!wrap) return;
 
-    render(
-        <App />,
-        wrap
-    )
+    const root = createRoot(wrap);
+    root.render(<App />);
 }

@@ -1,4 +1,4 @@
-import '../css/index.scss';
+import '../../css/dev/index.scss';
 import { initAppLavka } from './app/App';
 
 
