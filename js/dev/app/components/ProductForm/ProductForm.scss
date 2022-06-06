@@ -1,0 +1,65 @@
+.app-product-form {
+    .form-box {
+        .headline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .headline .title {
+            color: #282828;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .headline .link {
+            color: #c49e74;
+            font-size: 14px;
+            text-decoration: underline;
+            margin-left: 15px;
+            transition: opacity 0.3s ease;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .form-box-select {
+        margin-bottom: 32px;
+    }
+
+    .form-box-button {
+        margin-bottom: 24px;
+        .btn {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .select-sizes {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+        .list {
+            display: flex;
+            overflow: auto;
+        }
+        .checkbox {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .select-colors {
+        .list {
+            display: flex;
+            overflow: auto;
+        }
+        .checkbox {
+            &:not(:last-child) {
+                margin-right: 4px;
+            }
+        }
+    }
+}

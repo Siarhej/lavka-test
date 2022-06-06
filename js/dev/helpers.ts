@@ -1,11 +1,5 @@
 
 
-export const REQUEST_STATUS = {
-    error: 'error',
-    pending: 'pending',
-    success: 'success'
-}
-
 export const fetchData = async (url: string): Promise<Response> => {
     return fetch(url, {
         method: 'GET',
@@ -21,6 +15,6 @@ export const execute = (callback: Function, ...args: any[]) => {
     callback(...args);
 }
 
-export const getImgPath = () => {
-    return window.location.origin + '/img';
+export const getImgPath = (filename: string) => {
+    return window.location.origin + '/img/' + filename;
 }

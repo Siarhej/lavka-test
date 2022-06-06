@@ -1,0 +1,56 @@
+.app-product-nav {
+    .cards-nav {
+        display: flex;
+        overflow: auto;
+    }
+
+    .card {
+        min-width: 107px;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        padding: 7px 9px 12px;
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    .card-head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+        .icon {
+            flex-shrink: 0;
+            margin-right: 4px;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .text {
+            color: #bd9365;
+            font-size: 14px;
+            margin-right: 4px;
+        }
+        .arrow {
+            flex-shrink: 0;
+            margin-left: auto;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .card-body {
+        color: #282828;
+        font-size: 14px;
+    }
+
+    .card:hover {
+        opacity: 0.6;
+    }
+}

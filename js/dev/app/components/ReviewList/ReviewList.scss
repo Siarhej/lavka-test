@@ -1,0 +1,129 @@
+.app-review-list {
+    .review {
+        &:not(:first-child) {
+            padding-top: 15px;
+        }
+        &:not(:last-child) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .review-head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 9px;
+        .avatar {
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 10px;
+            img {
+                font-size: 10px;
+                background-color: #c4c4c4;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+        }
+        .name {
+            margin-right: 10px;
+        }
+        .date {
+            color: #b0afab;
+            font-size: 14px;
+            margin-left: auto;
+        }
+    }
+
+    .review-body {
+        .chars {
+            margin-bottom: 8px;
+            font-size: 14px;
+            span:not(:last-child)::after {
+                content: '';
+                padding-right: 3px;
+            }
+        }
+        .stars {
+            margin-right: -8px;
+            margin-bottom: 16px;
+            .star {
+                margin-right: 8px;
+            }
+            .star svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .list-img {
+            display: flex;
+            margin-top: 8px;
+            margin-right: -17px;
+            padding-right: 17px;
+            overflow: auto;
+            .img {
+                display: flex;
+                flex-shrink: 0;
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+            img {
+                font-size: 10px;
+                border-radius: 4px;
+                width: 104px;
+                height: 156px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .review-foot {
+        margin-top: 16px;
+    }
+
+    .answer {
+        display: flex;
+        align-items: flex-start;
+        .arrow {
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 8px;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .answer-content {
+            background-color: #faf1e8;
+            border-radius: 10px;
+            width: 100%;
+            padding: 8px 16px;
+        }
+    }
+
+    .answer-head {
+        display: flex;
+        align-items: center;
+        .avatar {
+            display: flex;
+            flex-shrink: 0;
+            margin-right: 8px;
+            img {
+                font-size: 10px;
+                background-color: #c49e74;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+            }
+        }
+        .name {
+        }
+    }
+
+    .btn-set-review {
+        text-transform: none;
+        margin-top: 32px;
+    }
+}

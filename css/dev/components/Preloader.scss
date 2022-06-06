@@ -1,0 +1,40 @@
+.component-preloader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto;
+    span {
+        border: 5px solid #ffc543;
+        border-left-color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        transform: translateZ(0);
+        animation: spinner 1.1s infinite linear;
+    }
+}
+
+.component-preloader.component-preloader-full-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #fff;
+    z-index: 9999999;
+    span {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,26 @@
+.app-product-nav-tabs {
+    .tabs {
+        display: flex;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .tab-item {
+        background-color: #fff;
+        border: 1px solid #dddddd;
+        border-radius: 20px;
+        padding: 10px 24px;
+        color: #282828;
+        white-space: nowrap;
+        transition-property: opacity, background-color, border-color, color;
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+        &.active {
+            pointer-events: none;
+            background-color: #bd9365;
+            border-color: #bd9365;
+            color: #fff;
+        }
+    }
+}

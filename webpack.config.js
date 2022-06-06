@@ -67,7 +67,23 @@ const createConfig = ({ isDev, entry, outputFile, cssFile }) => {
                             }
                         }
                     ]
-                }
+                },
+                {
+                    test: /\.svg$/,
+                    use: {
+                        loader: '@svgr/webpack',
+                        options: {
+                            svgoConfig: {
+                                plugins: [
+                                    {
+                                        name: 'removeViewBox',
+                                        active: false
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                },
             ]
         },
         resolve: {
@@ -93,11 +109,10 @@ const createConfig = ({ isDev, entry, outputFile, cssFile }) => {
                 filename: cssFile
             })
         ],
-        devtool: !isDev ? false : 'source-map',
         watch: isDev,
+        devtool: !isDev ? false : 'source-map',
         watchOptions: {
             ignored: /node_modules/
-            // poll: 500
         }
     }
 }

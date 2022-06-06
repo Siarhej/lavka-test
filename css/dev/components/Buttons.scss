@@ -1,0 +1,52 @@
+.component-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: #fff;
+    border: 1.5px solid transparent;
+    border-radius: 25px;
+    color: #282828;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    .icon + .text {
+        margin-left: 8px;
+    }
+
+    .text + .icon {
+        margin-right: 8px;
+    }
+
+    .icon {
+        display: flex;
+        flex-shrink: 0;
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &.component-button-white {
+        border-color: #282828;
+    }
+
+    &.component-button-yellow {
+        background-color: #ffc543;
+        border-color: #ffc543;
+    }
+
+    &.component-button-brown {
+        background-color: #bd9365;
+        border-color: #bd9365;
+        color: #fff;
+    }
+}
