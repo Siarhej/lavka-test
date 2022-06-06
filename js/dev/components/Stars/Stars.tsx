@@ -1,6 +1,6 @@
 import React from 'react';
 import { getClassPrefix } from '..';
-import { createArray } from '../../app/helpers';
+import { createArray } from '../../helpers';
 import { Svg } from '../Svg/Svg';
 
 export interface StarsProps {

@@ -9,7 +9,8 @@ import ProductRecent from '../../components/ProductRecent/ProductRecent';
 import ProductSlider from '../../components/ProductSlider/ProductSlider';
 import ProductSocial from '../../components/ProductSocial/ProductSocial';
 import ProductSummary from '../../components/ProductSummary/ProductSummary';
-import { getClassPrefix, getFromSessionStorage, handleErrorRequest, handleSuccessRequest, setToSessionStorage } from '../../helpers';
+import { getClassPrefix, handleErrorRequest, handleSuccessRequest } from '../../helpers';
+import { getFromSessionStorage, setToSessionStorage } from '../../../helpers';
 import { AJAX_PRODUCT } from '../../servers/actions';
 import { getAjaxData, REQUEST_STATUS } from '../../servers/requests';
 import { RequestData } from '../../types';
@@ -19,9 +20,11 @@ import './Product.scss';
  * Полноценное кэширование не делал, так как задача в рамках тестового. Просто раздражал постоянный прелоудер при перезагрузке страницы,
  * то добавил запись данных в сессионку
  */
-const cache = getFromSessionStorage('PRODUCTS');
+
 
 const Product = () => {
+    const cache = getFromSessionStorage('PRODUCTS');
+
     const [requestData, setRequestData] = useState<RequestData>({
         status: cache ? REQUEST_STATUS.success : REQUEST_STATUS.pending,
         data: cache,

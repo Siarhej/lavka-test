@@ -1,6 +1,7 @@
 import React from 'react';
 import { Stars } from '../../../components';
-import { declOfNum, getClassPrefix } from '../../helpers';
+import { declOfNum } from '../../../helpers';
+import { getClassPrefix } from '../../helpers';
 import './ReviewSummary.scss';
 
 export interface ReviewSummaryProps {
